@@ -55,7 +55,7 @@ function dragDrop (elem, listeners) {
       listeners.onDragOver(e)
     }
 
-    if (e.dataTransfer.items) {
+    if (e.dataTransfer.items.length) {
       // Only add "drag" class when `items` contains items that are able to be
       // handled by the registered listeners (files vs. text)
       var items = Array.from(e.dataTransfer.items)

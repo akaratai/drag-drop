@@ -110,7 +110,7 @@ function dragDrop (elem, listeners) {
     }
 
     // file drop support
-    if (e.dataTransfer.items) {
+    if (e.dataTransfer.items.length) {
       // Handle directories in Chrome using the proprietary FileSystem API
       var items = toArray(e.dataTransfer.items).filter(function (item) {
         return item.kind === 'file'
